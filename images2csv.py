@@ -19,4 +19,4 @@ for file in glob.iglob('images/cats/*'):
 df = pd.DataFrame(data={'X': X, 'y': y})
 
 np.set_printoptions(threshold=sys.maxsize)
-df.to_csv('data/cats.csv', index=False)
+df.to_csv('data/cats.csv', index=False, sep='\t')
