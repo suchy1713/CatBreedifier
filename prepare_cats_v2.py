@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import cv2
 
-directory = 'images/cats_v2'
+directory = 'images/cats_flickr'
 
 #get all folder names
 _, folder_names, _ = next(os.walk(directory))
@@ -25,7 +25,7 @@ _, folder_names, _ = next(os.walk(directory))
 
 #resize every picture to the average size
 for folder in folder_names:
-    for file in glob.iglob(os.fsencode('images/cats_v2/'+folder+'/*')):
+    for file in glob.iglob(os.fsencode('images/cats_flickr/'+folder+'/*')):
         file = file.decode("utf-8") 
         print(file)
         image = Image.open(file).convert('RGB')
